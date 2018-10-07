@@ -1,42 +1,46 @@
 {
-    "name": "Slack Invite Automation",
-    "description": "A tiny web application to invite a user into your slack team.",
-    "repository": "https://github.com/outsideris/slack-invite-automation",
-    "keywords": ["node", "slack", "invite"],
-    "masonVersion": "v1",
-    "services": [
-        {
-            "name": "web",
-            "image": "registry.mason.ci/benmag/pebble",
-            "ports": [
-                "80:3000"
-            ]
-        }
-    ],
-    "questions": [
-        {
-            "key": "COMMUNITY_NAME", 
-            "value": "YOUR TEAM NAME",
-            "description": "Your team name",
-            "required": true,
-        },
-        {
-            "key": "SLACK_URL", 
-            "value": "YOUR-TEAM.slack.com",
-            "description": "Your slack url(ex: socketio.slack.com)",
-            "required": true,
-        },
-        {
-            "key": "SLACK_TOKEN", 
-            "value": "",
-            "description": "access token of slack, You can generate it in https://api.slack.com/web#auth",
-            "required": true,
-        },
-        {
-            "key": "INVITE_TOKEN", 
-            "value": "",
-            "description": "Shared invite token used to get access. Leave blank if you don't want users to have to provide a token.",
-            "required": false,
-        },
-    ],
+  "name": "Slack Invite Automation",
+  "description": "A tiny web application to invite a user into your slack team.",
+  "repository": "https://github.com/outsideris/slack-invite-automation",
+  "keywords": [
+    "node",
+    "slack",
+    "invite"
+  ],
+  "masonVersion": "v1",
+  "services": [
+    {
+      "name": "web",
+      "image": "registry.mason.ci/benmag/pebble",
+      "ports": [
+        "80:3000"
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "key": "COMMUNITY_NAME",
+      "value": "YOUR TEAM NAME",
+      "description": "Your team name",
+      "required": true
+    },
+    {
+      "key": "SLACK_URL",
+      "value": "YOUR-TEAM.slack.com",
+      "description": "Your slack url(ex: socketio.slack.com)",
+      "required": true
+    },
+    {
+      "key": "SLACK_TOKEN",
+      "value": "",
+      "description": "access token of slack, You can generate it in https://api.slack.com/web#auth",
+      "required": true
+    },
+    {
+      "key": "INVITE_TOKEN",
+      "value": "",
+      "description": "Shared invite token used to get access. Leave blank if you don't want users to have to provide a token.",
+      "required": false
+    }
+  ]
 }
