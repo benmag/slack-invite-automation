@@ -11,7 +11,7 @@
   "services": [
     {
       "name": "web",
-      "image": "registry.mason.ci/benmag/pebble",
+      "image": "${app}"
       "ports": [
         "80:3000"
       ]
